@@ -1,0 +1,20 @@
+{
+  "require-dev": {
+    "phpstan/phpstan": "^1.9",
+    "squizlabs/php_codesniffer": "^3.7"
+  },
+  "require": {
+    "php": "^8.1",
+    "ramsey/uuid": "^4.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "src\\": "src/"
+    }
+  },
+  "scripts": {
+    "cs_fix": "vendor/bin/phpcbf --standard=PSR12 src",
+    "cs_check": "vendor/bin/phpcs --standard=PSR12 src",
+    "phpstan": "vendor/bin/phpstan analyse --level max src"
+  }
+}
